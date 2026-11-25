@@ -151,6 +151,7 @@ function showSetup() {
   $('setup').hidden = false;
   $('sheet-input').value = params.get('sheet') || '';
   $('api-input').value = params.get('api') || DEFAULT_API_URL;
+  $('backend-setup').hidden = Boolean(DEFAULT_API_URL) && !params.has('api');
   $('title-input').value = params.get('title') || '';
 }
 $('link-form').addEventListener('submit', event => {

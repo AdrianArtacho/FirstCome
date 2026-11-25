@@ -4,7 +4,9 @@ A small GitHub Pages app for shared, first-come-first-served lists. Each row in 
 
 **[Open FirstCome](https://adrianartacho.github.io/FirstCome/)** · **[Preview the interface](https://adrianartacho.github.io/FirstCome/?demo=1)**
 
-The preview is temporary and browser-local. Live lists require the Google Apps Script service below. GitHub Pages serves the interface; Google stores the shared claims. No student account or login is needed.
+**The hosted app is connected to its shared reservation service.** Paste your public two-column Google Sheet URL into the home page to create a sharing link. No student account or login is needed. GitHub Pages serves the interface; Google stores the shared claims.
+
+The interface preview is temporary and browser-local. The setup below is for hosting your own separate installation; it is already complete for the linked FirstCome app.
 
 ## Your spreadsheet
 

@@ -19,9 +19,11 @@
       <form id="link-form">
         <label for="sheet-input">Public Google Sheet</label>
         <input id="sheet-input" type="url" required placeholder="https://docs.google.com/spreadsheets/d/…/edit#gid=0">
-        <label for="api-input">Apps Script web app</label>
-        <input id="api-input" type="url" required placeholder="https://script.google.com/macros/s/…/exec">
-        <p class="field-help">One-time setup: <a href="https://github.com/AdrianArtacho/FirstCome#setup">follow the short guide</a>.</p>
+        <div id="backend-setup">
+          <label for="api-input">Apps Script web app</label>
+          <input id="api-input" type="url" required placeholder="https://script.google.com/macros/s/…/exec">
+          <p class="field-help">One-time setup: <a href="https://github.com/AdrianArtacho/FirstCome#setup">follow the short guide</a>.</p>
+        </div>
         <label for="title-input">List title <span class="optional">(optional)</span></label>
         <input id="title-input" maxlength="160" placeholder="Choose a topic">
         <button class="primary" type="submit">Create sharing link</button>
