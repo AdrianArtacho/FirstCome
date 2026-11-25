@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="A simple shared list. Choose an available option and it is yours.">
+  <title>FirstCome</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header><a class="wordmark" href="./">FirstCome<span aria-hidden="true">.</span></a></header>
+    <section id="setup" hidden aria-labelledby="setup-title">
+      <h1 id="setup-title">One list. One choice at a time.</h1>
+      <p class="intro">Connect a two-column Google Sheet. Each option can be taken once, by the first person to choose it.</p>
+      <form id="link-form">
+        <label for="sheet-input">Public Google Sheet</label>
+        <input id="sheet-input" type="url" required placeholder="https://docs.google.com/spreadsheets/d/…/edit#gid=0">
+        <label for="api-input">Apps Script web app</label>
+        <input id="api-input" type="url" required placeholder="https://script.google.com/macros/s/…/exec">
+        <p class="field-help">One-time setup: <a href="https://github.com/AdrianArtacho/FirstCome#setup">follow the short guide</a>.</p>
+        <label for="title-input">List title <span class="optional">(optional)</span></label>
+        <input id="title-input" maxlength="160" placeholder="Choose a topic">
+        <button class="primary" type="submit">Create sharing link</button>
+      </form>
+      <div id="share-result" hidden>
+        <label for="share-url">Share this link with everyone</label>
+        <input id="share-url" readonly>
+        <div class="actions"><button id="copy-link" type="button">Copy link</button><a id="open-list" class="button" href="#">Open list</a></div>
+      </div>
+      <p class="example-link"><a href="?demo=1">Preview an example</a></p>
+    </section>
+    <section id="list-view" hidden aria-labelledby="list-title">
+      <div id="demo-note" class="demo-note" hidden>Example preview · choices here are temporary.</div>
+      <h1 id="list-title">Choose one.</h1>
+      <p class="intro" id="list-intro">First come, first served. Choose an option to claim it and open its link.</p>
+      <ol id="choices" aria-label="Choices"></ol>
+      <p id="availability" class="availability"></p>
+      <div class="actions">
+        <button id="refresh" class="quiet" type="button">Refresh</button>
+        <button id="recover" type="button" hidden>Check my choice</button>
+        <a id="reopen" class="button" href="#" hidden>Open my choice</a>
+        <button id="reset-demo" class="quiet" type="button" hidden>Reset example</button>
+      </div>
+    </section>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <noscript>Enable JavaScript to load the list and reserve an option.</noscript>
+  </main>
+</body>
+</html>
