@@ -8,6 +8,10 @@ A small GitHub Pages app for shared, first-come-first-served lists. Each row in 
 
 The interface preview is temporary and browser-local. The setup below is for hosting your own separate installation; it is already complete for the linked FirstCome app.
 
+A [live example list](https://adrianartacho.github.io/FirstCome/?sheet=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1xnNqk3oLOkGE6bD6KrWUtc9MgYPnMLMlLNIbDS6WTk8%2Fedit%3Fgid%3D941701021&title=FirstCome+example) and its [two-column source sheet](https://docs.google.com/spreadsheets/d/1xnNqk3oLOkGE6bD6KrWUtc9MgYPnMLMlLNIbDS6WTk8/edit#gid=941701021) are available. Unlike the interface preview, choices in this example are real shared claims.
+
+Deployment verified on 25 November 2026: two independent tabs claimed the same option concurrently; exactly one received the destination, and the other received Taken. Reloading preserved the claim. Reloading during a second reservation recovered the same claim without an extra receipt. The 20 automated checks also pass.
+
 ## Your spreadsheet
 
 Use an ordinary Google Sheet with two columns, optionally headed `Text` and `URL`:
